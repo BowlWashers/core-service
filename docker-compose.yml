@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  service:
+    build: .
+    volumes:
+      - .:/srv/service
+  # db:
+  #   image: mysql:5.7.30
+  #   restart: always
+  #   volumes:
+  #     - ./volumes/mysql:/var/lib/mysql
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+  #   ports:
+  #     - ${MYSQL_PORT}:3306
