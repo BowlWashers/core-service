@@ -14,7 +14,6 @@ import { UsersModule } from './app/modules/users/users.module';
 @Module({
   imports: [
     ConfigModule.forRoot(), // TODO: follow: https://docs.nestjs.com/techniques/configuration
-    // RecipesModule,
     UsersModule,
     TypeOrmModule.forRoot({
       // TODO: move to config
@@ -30,10 +29,7 @@ import { UsersModule } from './app/modules/users/users.module';
     GraphQLModule.forRoot({
       // TODO: investigate
       autoSchemaFile: './src/app/schema.gql',
-      include: [
-        // RecipesModule,
-        UsersModule,
-      ],
+      include: [UsersModule],
       // debug: false,
       // playground: false,
     }),
