@@ -3,16 +3,16 @@ import { Field, ArgsType } from '@nestjs/graphql';
 
 @ArgsType()
 export class ListUsersArgs {
-  @Field({ nullable: true })
+  @Field(() => String, { nullable: true })
   @IsEmail()
-  email: string;
+  email?: string;
 
   @Field({ nullable: true })
-  createdDate: Date;
+  createdDate?: Date;
 
   @Field({ nullable: true })
-  updatedDate: Date;
+  updatedDate?: Date;
 
   @Field({ nullable: true })
-  deletedDate: Date;
+  deletedDate?: Date;
 }

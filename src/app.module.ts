@@ -17,6 +17,7 @@ import { UsersModule } from './app/modules/users/users.module';
     UsersModule,
     TypeOrmModule.forRoot({
       // TODO: move to config
+      // TODO: investigate how transaction is done in TypeORM: https://typeorm.io/#/transactions/creating-and-using-transactions
       type: 'mysql',
       host: 'localhost',
       port: 4306,
@@ -24,12 +25,14 @@ import { UsersModule } from './app/modules/users/users.module';
       password: 'rootPassword',
       database: 'test',
       autoLoadEntities: true,
+      // TODO: use migration instead of synchronize: https://github.com/ambroiseRabier/typeorm-nestjs-migration-example
       synchronize: true,
     }),
     GraphQLModule.forRoot({
       // TODO: investigate
       autoSchemaFile: './src/app/schema.gql',
       include: [UsersModule],
+      fieldResolverEnhancers: ['interceptors'],
       // debug: false,
       // playground: false,
     }),

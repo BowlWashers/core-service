@@ -1,9 +1,9 @@
-import { IsInt } from 'class-validator';
+import { Min } from 'class-validator';
 import { Field, ArgsType, Int } from '@nestjs/graphql';
 
 @ArgsType()
 export class GetUserArgs {
   @Field(() => Int)
-  @IsInt()
+  @Min(1)
   id: number;
 }
