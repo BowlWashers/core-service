@@ -1,14 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository, FindManyOptions } from 'typeorm';
+import { FindManyOptions } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 import { User } from './user.entity';
+import { UserRepository } from './user.repository';
 
 @Injectable()
 export class UsersService {
   constructor(
-    @InjectRepository(User)
-    private usersRepository: Repository<User>,
+    // TODO: nest doc examples inject entity directly, and others use repository layer, see if it is useful
+    @InjectRepository(UserRepository)
+    private usersRepository: UserRepository,
   ) {}
 
   async create({ email, password }): Promise<User> {

@@ -17,7 +17,7 @@ $ yarn
 Start the environment first
 
 ```
-$ docker-compose up
+$ docker-compose up -d
 ```
 
 Run the app
@@ -46,6 +46,14 @@ $ yarn test:e2e
 
 # test coverage
 $ yarn test:cov
+```
+
+## Create files
+
+```bash
+nest g module app/modules/<module_name>
+nest g controller app/modules/<controller_name>
+nest g service app/modules/<service_name>
 ```
 
 ## Readings
