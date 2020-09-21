@@ -7476,10 +7476,10 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-nestjs-graphql-relay@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/nestjs-graphql-relay/-/nestjs-graphql-relay-1.0.0.tgz#d38b6b4b9024f0edec40827789d520e1c3006c7e"
-  integrity sha512-g0XizT49ohjt0xSVJs7fMtTFUwsIrbO3xgTyelxeiSP8bN8xxxf4cJ5/ZYfcyQoFeD/Ubb18VsuGRGDuRq7xFQ==
+nestjs-graphql-relay@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/nestjs-graphql-relay/-/nestjs-graphql-relay-1.0.1.tgz#9624565d8ce48f4442c27eaba0806d9e8a8d5a99"
+  integrity sha512-mRsNciLtixEvQptwJxLBIy5aDvqu9njfy9KoqywOyulm/mQG6BMV8LF1jC9E/los/SyvV91HAwQ+Mv93+vKDbQ==
 
 next-tick@1:
   version "1.1.0"
